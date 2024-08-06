@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px; /* For vertical scrollbars */
+  }
+  
+::-webkit-scrollbar-thumb {
+  background-color: rgb(187, 187, 187);
+}
+
+h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 36px;
+    text-align: center;
+    border-bottom: 2px solid #0800FF;
+}
+
+.discription > div {
+    height: 90vh;
+    padding: 20px;
+}
+
+.links ul li a {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    margin-block: 2rem !important;
+    color: #0800FF;
+}
+
+a:hover {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.project {
+    display: flex;
+    border-radius: 5px;
+    height: 9rem;
+    background-color: #86efac;
+    margin: 1rem;
+}
+
+.project>div {
+    padding: 6px;
+    height: 8rem;
+    overflow-y: auto;
+}
+
+.lang_grid>div{
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.lang_grid>div h2 {
+    color: rgb(175, 114, 224);
+    font-size: 1.5rem;
+    border-bottom: 2px solid rgb(24, 196, 196);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+
+
+@media screen and (max-width: 640px) {
+    .discription > div {
+        height: 100vh;
+        padding: 20px;
+    }
+    .sidebar.open{
+        transform: translateX(0) !important;
+        transition: transform 0.2s ease-in;
+        z-index: 10;
+    }
+
+    #overlay.open {
+        display: block;
+    }
+}
+
+@media screen and  (max-width: 768px){
+    .links ul li a {
+        font-size: 20px;
+    }
+}
