@@ -1,22 +1,13 @@
-import React, {useState} from "react";
-export function Overlay(){
-    return (
-        <div id="overlay"></div>
-    );
-}
-
 export default function Awanish(){
   return (
-  <div id="intro" className="bg-green-200 sm:rounded-3xl sm:my-8 sm:mr-12" >
+  <div id="intro" className="sm:bg-green-200 sm:rounded-3xl sm:my-8 sm:mr-12" >
       <h1 className="mt-8">
-        <button className="select bg-green-300 rounded-md">
-          Hi, 
-        </button>
-        this is Awanish's folio website
+         Hi, this is <span className="text-rose-500">Awanish's folio</span>  website
       </h1>
-      <p className="text-md md:text-xl my-12">
+      <p className="text-xl my-12">
         Hi, I am <strong>Awanish Yadav</strong>. You are welcome to check my
-        CV <a href="">link </a> here.
+        CV <a href="https://www.github.com" className="text-violet-600 underline">link </a> here.
+        <br></br>
         I am currently persuing Bachelor of
         Technology at University of Lucknow with Computer science as branch.
         Highly motivated Computer Science undergraduate with a strong

@@ -31,9 +31,9 @@ const cardData = {
 function Card(props){
   return (
     <div className="project">
-      <img src={props.imageUrl} alt="image" className="rounded-lg" />
+      <img src={props.imageUrl} alt="project" className="rounded-lg" />
       <div>
-        <a href={props.linkUrl} className="text-xl" target="_blank">
+        <a href={props.linkUrl} className="text-xl" >
           {props.Name}
         </a>
         <p>
@@ -47,7 +47,7 @@ function Card(props){
 
 export default function Project(){
     return (
-        <div id="projects" className="bg-green-200 sm:rounded-3xl sm:my-8 sm:mr-12" >
+        <div id="projects" className="sm:bg-green-200 sm:rounded-3xl sm:my-8 sm:mr-12" >
         <h1>Projects</h1>
         <hr />
         <div className="box">

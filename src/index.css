@@ -31,7 +31,7 @@ h1 {
     padding: 20px;
 }
 
-.links ul li a {
+.links > ul >li> a {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -40,6 +40,12 @@ h1 {
     text-align: center;
     margin-block: 2rem !important;
     color: #0800FF;
+}
+
+svg{
+    display: inline;
+    align-self: center;
+    justify-self: center;
 }
 
 a:hover {
@@ -72,32 +78,21 @@ a:hover {
     border-bottom: 2px solid rgb(24, 196, 196);
 }
 
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-
 
 @media screen and (max-width: 640px) {
     .discription > div {
         height: 100vh;
         padding: 20px;
     }
-    .sidebar.open{
-        transform: translateX(0) !important;
-        transition: transform 0.2s ease-in;
-        z-index: 10;
-    }
-
-    #overlay.open {
-        display: block;
+    .links ul li a {
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 50%;
+        background-color: cornflowerblue;
     }
 }
 
