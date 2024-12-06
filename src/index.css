@@ -2,102 +2,150 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Fragment+Mono:ital@0;1&display=swap");
 
-html,
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    scroll-behavior: smooth;
+  background-color: light-dark(#e2e2e2, #212121);
 }
 
 ::-webkit-scrollbar {
-    width: 5px; /* For vertical scrollbars */
-  }
-  
+  width: 5px; /* For vertical scrollbars */
+}
+
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(187, 187, 187);
+  background-color: light-dark(#5e37d3, #a78bfa);
+  border-radius: 10px;
 }
 
 h1 {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 36px;
-    text-align: center;
-    border-bottom: 2px solid #0800FF;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 36px;
+  text-align: center;
+  border-bottom: 2px solid light-dark(#3f3f3f, #c5c5c5);
 }
+
+/* side bar major */
 
 .discription > div {
-    height: 90vh;
-    padding: 20px;
+  height: 90vh;
+  padding: 20px;
+  background-color: light-dark(#aaaaaa, #212121);
+  box-shadow: 20px 20px 60px #0d0d0d, -20px -20px 60px #353535;
 }
 
-.links > ul >li> a {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 2rem;
-    display: block;
-    text-align: center;
-    margin-block: 2rem !important;
-    color: #0800FF;
+.sidebar {
+  background-color: light-dark(#aaaaaa, #212121);
+  box-shadow: 20px 20px 60px #0d0d0d, -20px -20px 60px #353535;
 }
 
-svg{
-    display: inline;
-    align-self: center;
-    justify-self: center;
+.links > ul > li > a {
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  margin-block: 2rem !important;
+  color: light-dark(#5e37d3, #a78bfa);
 }
 
-a:hover {
-    font-style: italic;
-    text-decoration: underline;
+.links > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+svg {
+  display: inline;
+  align-self: center;
+  justify-self: center;
+}
+
+/* project section css */
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .project {
+  height: 480px;
+  max-height: 600px;
+  border-radius: 5px;
+  box-shadow: -10px -10px 40px #0d0d0d, 10px 10px 40px #353535;
+  margin: 0.8rem;
+}
+
+.project > div {
+  padding: 4px;
+}
+
+.project > div > a {
+  display: block;
+  color: light-dark(#5e37d3, #a78bfa);
+  border-bottom: 2px solid #e2e2e2;
+  margin-bottom: 8px;
+}
+
+.project > div > a:hover {
+  border-color: #5e37d3;
+}
+/* language section css */
+.lang_grid > div {
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.lang_grid > div h2 {
+  color: rgb(175, 114, 224);
+  font-size: 1.5rem;
+  border-bottom: 2px solid rgb(24, 196, 196);
+}
+
+/* media querries for sreen sixe below 768 px */
+@media screen and (max-width: 768px) {
+  .links ul li a {
+    font-size: 20px;
+  }
+  .box {
     display: flex;
-    border-radius: 5px;
-    height: 9rem;
-    background-color: #86efac;
-    margin: 1rem;
+    flex-direction: column;
+  }
+  .project {
+    height: auto;
+  }
+  .img-box {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
 }
 
-.project>div {
-    padding: 6px;
-    height: 8rem;
-    overflow-y: auto;
-}
-
-.lang_grid>div{
-    padding: 4px;
-    border-radius: 6px;
-}
-
-.lang_grid>div h2 {
-    color: rgb(175, 114, 224);
-    font-size: 1.5rem;
-    border-bottom: 2px solid rgb(24, 196, 196);
-}
-
-
+/* media querries for sreen sixe below 640 px */
 @media screen and (max-width: 640px) {
-    .discription > div {
-        height: 100vh;
-        padding: 20px;
-    }
-    .links ul li a {
-        height: 3rem;
-        width: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-        border-radius: 50%;
-        background-color: cornflowerblue;
-    }
-}
-
-@media screen and  (max-width: 768px){
-    .links ul li a {
-        font-size: 20px;
-    }
+  .discription > div {
+    height: 100vh;
+    padding: 20px;
+  }
+  .links ul li a {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: light-dark(#252525, #444444);
+  }
+  .projects {
+    height: min-content !important;
+  }
 }
