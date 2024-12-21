@@ -1,7 +1,3 @@
-// import py from '../images/python.svg'
-// import js from '../images/javascript.svg'
-// import clang from '../images/c.svg'
-// import njs from '../images/nodedotjs.svg'
 export default function Lang(){
     return (
         <div id="langauage" className="sm:rounded-3xl sm:my-8 sm:mr-12" >

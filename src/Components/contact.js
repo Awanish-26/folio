@@ -1,7 +1,8 @@
-import github from "../images/github.svg"
-import linkedin from "../images/linkedin.svg"
-import leetcode from "../images/leetcode.svg"
-import gmail from "../images/gmail.svg"
+import github from "../images/general-icons/github.svg"
+import linkedin from "../images/general-icons/linkedin.svg"
+import leetcode from "../images/general-icons/leetcode.svg"
+import gmail from "../images/general-icons/gmail.svg"
+
 export default function Contact() {
     return (
         <div id="contact" className=" sm:rounded-3xl sm:my-8 sm:mr-12" >
