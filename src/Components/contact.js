@@ -5,7 +5,7 @@ import gmail from "../images/general-icons/gmail.svg"
 
 export default function Contact() {
     return (
-        <div id="contact" className=" sm:rounded-3xl sm:my-8 sm:mr-12" >
+        <div id="contact" className="contact sm:rounded-3xl sm:my-8 sm:mr-12" >
             <h1 className="mb-6">Contact</h1>
             <div className="ref_link flex justify-around gap-4">
               <div className="p-3 border-2 rounded-xl border-purple-400 border-opacity-10 hover:border-opacity-100 transition-opacity">

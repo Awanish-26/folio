@@ -9,11 +9,8 @@
   color-scheme: light dark;
 }
 
-html {
+html , body {
   scroll-behavior: smooth;
-}
-
-body {
   background-color: light-dark(#e2e2e2, #212121);
 }
 
@@ -35,10 +32,18 @@ h1 {
   border-bottom: 2px solid light-dark(#3f3f3f, #c5c5c5);
 }
 
+p{
+  margin: 0px;
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* side bar major */
 
 .discription > div {
-  height: 90vh;
   padding: 20px;
   background-color: light-dark(#aaaaaa, #212121);
   box-shadow: 20px 20px 60px #0d0d0d, -20px -20px 60px #353535;
@@ -70,6 +75,12 @@ svg {
   justify-self: center;
 }
 
+/* intro section */
+
+.intro {
+  height: 90vh;
+}
+
 /* project section css */
 .box {
   display: grid;
@@ -80,22 +91,24 @@ svg {
   height: 480px;
   max-height: 600px;
   border-radius: 5px;
-  box-shadow: -10px -10px 40px #0d0d0d, 10px 10px 40px #353535;
+  background-color: #121212;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   margin: 0.8rem;
 }
 
-.project > div {
-  padding: 4px;
+.project > .text-box {
+  padding: 16px;
+  height: full  ;
 }
 
-.project > div > a {
+.text-box > a {
   display: block;
   color: light-dark(#5e37d3, #a78bfa);
-  border-bottom: 2px solid #e2e2e2;
   margin-bottom: 8px;
 }
 
-.project > div > a:hover {
+.text-box > a:hover {
   border-color: #5e37d3;
 }
 /* language section css */
@@ -104,14 +117,18 @@ svg {
   border-radius: 6px;
 }
 
-.lang_grid > div h2 {
+.lang_grid > div > h2 {
   color: rgb(175, 114, 224);
   font-size: 1.5rem;
-  border-bottom: 2px solid rgb(24, 196, 196);
+  border-bottom: 2px solid #18c4c4;
+  margin-bottom: 12px;
 }
 
 /* media querries for sreen sixe below 768 px */
 @media screen and (max-width: 768px) {
+  .intro {
+    height: auto;
+  }
   .links ul li a {
     font-size: 20px;
   }
@@ -132,7 +149,7 @@ svg {
 /* media querries for sreen sixe below 640 px */
 @media screen and (max-width: 640px) {
   .discription > div {
-    height: 100vh;
+    margin-bottom: 2rem;
     padding: 20px;
   }
   .links ul li a {
@@ -147,5 +164,8 @@ svg {
   }
   .projects {
     height: min-content !important;
+  }
+  .contact{
+    margin-bottom: 8rem !important;
   }
 }

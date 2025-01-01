@@ -1,11 +1,11 @@
 export default function Lang(){
     return (
         <div id="langauage" className="sm:rounded-3xl sm:my-8 sm:mr-12" >
-            <h1 className="mb-6">Lang & Dev tools</h1>
+            <h1 className="mb-4">Lang & Dev tools</h1>
             <div className="lang_grid grid grid-rows-2 grid-cols-2 gap-2">
               <div>
                 <h2>Langauages</h2>
-                <p>Python</p>
+                <p> Python </p>
                 <p>Javascript</p>
                 <p>C</p>
                 <p>NodeJS</p>
