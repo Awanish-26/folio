@@ -9,13 +9,15 @@
   color-scheme: light dark;
 }
 
-html , body {
+html,
+body {
   scroll-behavior: smooth;
   background-color: light-dark(#e2e2e2, #212121);
 }
 
 ::-webkit-scrollbar {
-  width: 5px; /* For vertical scrollbars */
+  width: 5px;
+  /* For vertical scrollbars */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -32,7 +34,7 @@ h1 {
   border-bottom: 2px solid light-dark(#3f3f3f, #c5c5c5);
 }
 
-p{
+p {
   margin: 0px;
   font-family: Roboto, Helvetica, Arial, sans-serif !important;
   font-weight: 400;
@@ -92,14 +94,18 @@ svg {
   max-height: 600px;
   border-radius: 5px;
   background-color: #121212;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.051),
+    rgba(255, 255, 255, 0.051)
+  );
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   margin: 0.8rem;
 }
 
 .project > .text-box {
   padding: 16px;
-  height: full  ;
+  height: full;
 }
 
 .text-box > a {
@@ -111,6 +117,7 @@ svg {
 .text-box > a:hover {
   border-color: #5e37d3;
 }
+
 /* language section css */
 .lang_grid > div {
   padding: 4px;
@@ -120,8 +127,17 @@ svg {
 .lang_grid > div > h2 {
   color: rgb(175, 114, 224);
   font-size: 1.5rem;
-  border-bottom: 2px solid #18c4c4;
+  border-bottom: 1px solid #18c4c4;
   margin-bottom: 12px;
+}
+
+.lang_grid > div > p {
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
+.lang_grid > div > p:hover {
+  background-color: #ffffff1a;
 }
 
 /* media querries for sreen sixe below 768 px */
@@ -129,16 +145,20 @@ svg {
   .intro {
     height: auto;
   }
+
   .links ul li a {
     font-size: 20px;
   }
+
   .box {
     display: flex;
     flex-direction: column;
   }
+
   .project {
     height: auto;
   }
+
   .img-box {
     width: 100%;
     height: 200px;
@@ -152,6 +172,7 @@ svg {
     margin-bottom: 2rem;
     padding: 20px;
   }
+
   .links ul li a {
     height: 3rem;
     width: 3rem;
@@ -162,10 +183,12 @@ svg {
     border-radius: 50%;
     background-color: light-dark(#252525, #444444);
   }
+
   .projects {
     height: min-content !important;
   }
-  .contact{
+
+  .contact {
     margin-bottom: 8rem !important;
   }
 }
