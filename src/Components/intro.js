@@ -8,10 +8,10 @@ export default function Awanish() {
       <h1 className="mt-4">
         Hi, this is <span className="text-rose-500">Awanish's folio</span>  website
       </h1>
-      <img src={zig} alt="zigzag" className="fixed -rotate-2 h-full left-24 top-0 bottom-0 -z-10" />
+      <img src={zig} alt="zigzag" className="fixed -rotate-2 h-full left-24 top-0 bottom-0 -z-10 aspect-square" />
       <p className="text-xl my-12">
         Hi, I am <strong>Awanish Yadav</strong>. You can check my
-        CV <a href="https://shorturl.at/7W34I" rel="noreferrer" target="_blank" className="text-violet-400 bg-gray-700 rounded underline px-2 hover:italic"> click here </a>
+        CV <a href="https://shorturl.at/7W34I" aria-label='resume url' rel="noreferrer" target="_blank" className="text-violet-400 bg-gray-700 rounded underline px-2 hover:italic"> click here </a>
         <br></br>
         I am currently persuing Bachelor of
         Technology at University of Lucknow with Computer science as branch.

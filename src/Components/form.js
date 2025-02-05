@@ -35,20 +35,20 @@ const ContactForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="contact-form p-8 w-full rounded-xl flex flex-col gap-2">
-            <div className="w-full mb-6">
+        <form onSubmit={handleSubmit} className="contact-form p-8 w-full rounded-xl flex flex-col gap-4">
+            <div className="w-full">
                 <label className="text-xl block mb-2" >Full Name:</label>
-                <input className="px-4 py-2 w-1/3 border-collapse border-violet-100 border-b-2 focus:border-violet-500 outline-none transition-all" type="text" name="name" value={formData.name} onChange={handleChange} required />
+                <input className="p-2 bg-gray-300 bg-opacity-10 w-full md:w-2/3 border-collapse border-transparent border rounded focus:border-violet-500 outline-none transition-all" type="text" name="name" value={formData.name} onChange={handleChange} required />
             </div>
-            <div className="w-full mb-6">
+            <div className="w-full">
                 <label className="text-xl block mb-2" >Email:</label>
-                <input className="px-4 py-2 w-2/3 border-collapse border-violet-100 border-b-2 focus:border-violet-500 outline-none transition-all" type="email" name="email" value={formData.email} onChange={handleChange} required />
+                <input className="p-2 bg-gray-300 bg-opacity-10 w-full md:w-2/3 border-collapse border-transparent border rounded focus:border-violet-500 outline-none transition-all" type="email" name="email" value={formData.email} onChange={handleChange} required />
             </div>
-            <div className="w-full mb-6">
+            <div className="w-full mb-4">
                 <label className="text-xl block mb-2" >Message:</label>
-                <textarea className="px-4 py-2 w-full border-collapse border-violet-100 border-b-2 focus:border-violet-500 outline-none transition-all" name="message" value={formData.message} onChange={handleChange} required />
+                <textarea className="p-2 bg-gray-300 bg-opacity-10 w-full border-collapse border-transparent border rounded focus:border-violet-500 outline-none transition-all" maxLength={1000} name="message" value={formData.message} onChange={handleChange} required />
             </div>
-            <button className="mt-auto bg-rose-500 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded" type="submit">Send</button>
+            <button className="bg-rose-500 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded" type="submit">Send</button>
         </form>
     );
 };
