@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/folio/static/css/main.91878a2c.css",
-    "main.js": "/folio/static/js/main.4b8327df.js",
+    "main.css": "/folio/static/css/main.7ca715dc.css",
+    "main.js": "/folio/static/js/main.c24a9995.js",
     "static/js/453.65642199.chunk.js": "/folio/static/js/453.65642199.chunk.js",
     "static/media/Internship Resume.pdf": "/folio/static/media/Internship Resume.5b2b9f0b82a9376d8047.pdf",
     "static/media/backgd.png": "/folio/static/media/backgd.c4baaf06a413b7c71f7c.png",
@@ -15,12 +15,12 @@
     "static/media/linkedin.svg": "/folio/static/media/linkedin.f809b10d8dad9e4d104efaa51934bb3b.svg",
     "index.html": "/folio/index.html",
     "static/media/gmail.svg": "/folio/static/media/gmail.ad48b49fed7fb60ef9ede854dc72db12.svg",
-    "main.91878a2c.css.map": "/folio/static/css/main.91878a2c.css.map",
-    "main.4b8327df.js.map": "/folio/static/js/main.4b8327df.js.map",
+    "main.7ca715dc.css.map": "/folio/static/css/main.7ca715dc.css.map",
+    "main.c24a9995.js.map": "/folio/static/js/main.c24a9995.js.map",
     "453.65642199.chunk.js.map": "/folio/static/js/453.65642199.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.91878a2c.css",
-    "static/js/main.4b8327df.js"
+    "static/css/main.7ca715dc.css",
+    "static/js/main.c24a9995.js"
   ]
 }
