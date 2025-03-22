@@ -132,12 +132,43 @@ svg {
 }
 
 .lang_grid > div > p {
+  position: relative;
+  color: #eeeeee;
   border-radius: 4px;
   padding: 4px 6px;
+  margin: 2px;
 }
 
-.lang_grid > div > p:hover {
-  background-color: #ffffff1a;
+.lang_grid > div > p::before {
+  content: "";
+  position: absolute;
+  display: inline-flex;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  border-left: 50px solid #0ff040;
+  border-right: 50px solid #00d9ff;
+}
+
+.lang_grid > div > p:hover::before {
+  animation: exapnd 4s infinite alternate ease-in-out;
+}
+
+@keyframes exapnd {
+  0% {
+    left: 0;
+    right: unset;
+    width: 50px;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    left: unset;
+    right: 0;
+    width: 50px;
+  }
 }
 
 /* media querries for sreen sixe below 768 px */

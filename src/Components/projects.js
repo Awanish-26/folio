@@ -8,32 +8,40 @@ const description2 = "Full-stack blog web application with user registration and
 const description3 = "This project is currently under construction.";
 
 const cardData = {
-  card1:{
+  card1: {
     imageUrl: project1,
-    linkUrl:"https://awanish-26.github.io/Tailwind/",
-    Name : "Tailwind Shop Project",
-    discription:description1,
-    techStck: ["Tailwind CSS", "HTML", "Javascript","UI/UX"]
+    linkUrl: "https://awanish-26.github.io/Tailwind/",
+    Name: "Tailwind Shop Project",
+    discription: description1,
+    techStck: ["Tailwind CSS", "HTML", "Javascript", "UI/UX"]
   },
-  card2:{
+  card2: {
     imageUrl: project2,
-    linkUrl:"https://awanish996.pythonanywhere.com/",
-    Name : "Django Blog App",
+    linkUrl: "https://awanish996.pythonanywhere.com/",
+    Name: "Django Blog App",
     discription: description2,
-    techStck: ["Django", "HTML", "CSS", "Javascript" ,"Python"]
+    techStck: ["Django", "HTML", "CSS", "Javascript", "Python"]
   },
-  card3:{
+  card3: {
     imageUrl: alpha,
-    linkUrl:"",
-    Name : "Under Construction",
+    linkUrl: "",
+    Name: "Under Construction",
     discription: description3,
-    techStck: ["React", "Electron", "Firebase","BLAH BLAH"]
+    techStck: ["React", "Electron", "Firebase", "BLAH BLAH"]
   },
 }
 
-function Card(props){
+function Card(props) {
   return (
-    <div className="project">
+    <div className="project relative group">
+      {/* Top Border */}
+      <span className="absolute top-0 left-0 h-[1px] w-full bg-purple-500 transition-transform transform scale-x-0 group-hover:scale-x-100 duration-1000 origin-left"></span>
+      {/* Right Border */}
+      <span className="absolute top-0 right-0 w-[1px] h-full bg-purple-500 transition-transform transform scale-y-0 group-hover:scale-y-100 duration-1000 origin-top"></span>
+      {/* Bottom Border */}
+      <span className="absolute bottom-0 left-0 h-[1px] w-full bg-purple-500 transition-transform transform scale-x-0 group-hover:scale-x-100 duration-1000 origin-right"></span>
+      {/* Left Border */}
+      <span className="absolute top-0 left-0 w-[1px] h-full bg-purple-500 transition-transform transform scale-y-0 group-hover:scale-y-100 duration-1000 origin-bottom"></span>
       <div className='img-box'>
         <img src={props.imageUrl} alt="project" className="rounded-md" />
       </div>
@@ -41,32 +49,32 @@ function Card(props){
         <a href={props.linkUrl} className="text-xl" >
           {props.Name}
         </a>
-        <hr className='my-2'/>
+        <hr className='my-2' />
         <p className='font-sans font-normal text-base text-opacity-70'>
           {props.discription}
         </p>
       </div>
       <div className='btn-box px-4 mb-4'>
-      {props.techStck.map((tech, index) => (
-        <p key={index} className='mr-2 p-2 inline-block text-sm py-0 rounded-full bg-gray-500 bg-opacity-25'>
-          {tech}
-        </p>
-      ))}
+        {props.techStck.map((tech, index) => (
+          <p key={index} className='mr-2 p-2 inline-block text-sm py-0 rounded-full bg-gray-500 bg-opacity-25'>
+            {tech}
+          </p>
+        ))}
       </div>
     </div>
   );
 }
 
 
-export default function Project(){
-    return (
-        <div id="projects" className="projects sm:rounded-3xl sm:my-8 sm:mr-12" >
-        <h1>Projects</h1>
-        <div className="box">
-          <Card {...cardData.card1}/>
-          <Card {...cardData.card2}/>
-          <Card {...cardData.card3}/>
-        </div>
+export default function Project() {
+  return (
+    <div id="projects" className="projects sm:rounded-3xl sm:my-8 sm:mr-12" >
+      <h1>Projects</h1>
+      <div className="box">
+        <Card {...cardData.card1} />
+        <Card {...cardData.card2} />
+        <Card {...cardData.card3} />
       </div>
+    </div>
   );
 }
