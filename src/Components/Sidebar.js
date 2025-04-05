@@ -1,45 +1,47 @@
 import React, { useState, useEffect } from 'react';
-import shot from '../images/Screenshot.jpg';
+import me from '../images/me.png';
+import me2 from '../images/me.jpeg';
 import { FaRegUserCircle } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
 import { FaToolbox } from "react-icons/fa6";
 import { MdContactPage } from "react-icons/md";
 
-
 export default function Sidebar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+    const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const renderLinkContent = (label, Icon) => (windowWidth > 640 ? label : <Icon />);
+
   return (
     <section id="SideSide" className="sidebar w-full fixed bottom-0 left-0 right-0 h-24 flex flex-row sm:justify-center items-center border border-t-2 border-t-black sm:h-auto sm:w-1/4 sm:top-0 sm:bottom-0 sm:flex-col sm:border-none md:mx-12 md:my-8 md:rounded-3xl sm:outline outline-2 outline-purple-600 -outline-offset-8">
-      <div className="image hidden sm:block">
-        <img src={shot} alt="Profile" className="rounded-full mt-12 mx-auto border-2 border-sky-500 w-24 sm:w-32 md:w-44" />
+      {/* Profile Image */}
+      <div className="image hidden sm:block relative w-24 sm:w-32 md:w-44 mx-auto mt-12">
+        <img src={me} alt="Profile" className="rounded-full border-2 border-sky-500 w-full" />
+        <img src={me2} alt="Profile Hover" className="absolute top-0 left-0 w-full h-full rounded-full border-2 border-sky-500 opacity-0 transition-opacity duration-1000 hover:opacity-100" />
       </div>
+
+      {/* Navigation Links */}
       <div className="links sm:h-full w-full mx-2 sm:m-0">
-        <ul className='flex justify-around sm:block w-full'>
+        <ul className="flex justify-around sm:block w-full">
           <li>
-            <a href="#intro"> {windowWidth > 640 ? "Awanish" : <FaRegUserCircle />}</a>
+            <a href="#intro">{renderLinkContent("Awanish", FaRegUserCircle)}</a>
           </li>
           <li>
-            <a href="#projects"> {windowWidth > 640 ? "Projects" : <GoProjectRoadmap />} </a>
+            <a href="#projects">{renderLinkContent("Projects", GoProjectRoadmap)}</a>
           </li>
           <li>
-            <a href="#langauage"> {windowWidth > 640 ? "Languages" : <FaToolbox />}</a>
+            <a href="#langauage">{renderLinkContent("Languages", FaToolbox)}</a>
           </li>
           <li>
-            <a href="#contact">{windowWidth > 640 ? "Connect" : <MdContactPage />}</a>
+            <a href="#contact">{renderLinkContent("Connect", MdContactPage)}</a>
           </li>
         </ul>
       </div>
     </section>
-
   );
 }

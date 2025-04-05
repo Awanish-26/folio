@@ -11,14 +11,14 @@ const cardData = {
   card1: {
     imageUrl: project1,
     linkUrl: "https://awanish-26.github.io/Tailwind/",
-    Name: "Tailwind Shop Project",
+    Name: "Sweet Shop Project",
     discription: description1,
     techStck: ["Tailwind CSS", "HTML", "Javascript", "UI/UX"]
   },
   card2: {
     imageUrl: project2,
     linkUrl: "https://awanish996.pythonanywhere.com/",
-    Name: "Django Blog App",
+    Name: "MultiUser Blog App",
     discription: description2,
     techStck: ["Django", "HTML", "CSS", "Javascript", "Python"]
   },
