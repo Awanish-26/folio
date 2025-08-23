@@ -7,7 +7,7 @@ import ContactForm from './form';
 export default function Contact() {
   return (
     <div id="contact" className="contact sm:rounded-3xl sm:my-8 sm:mr-12" >
-      <h1 className="mb-6">Contact</h1>
+      <h1 className="">Contact</h1>
       <ContactForm />
       <hr className="w-[99%] mb-4 text-center" ></hr>
       <div className="ref_link flex justify-center gap-4">
@@ -27,7 +27,7 @@ export default function Contact() {
           </a>
         </div>
         <div className="p-3 border-2 rounded-xl border-rose-600 border-opacity-50 hover:border-opacity-100 transition-opacity">
-          <a href="https://leetcode.com/Awanish-26">
+          <a href="https://leetcode.com/crn-primus">
             <img className="w-8 h-8" src={leetcode} alt="leetcode icon"></img>
           </a>
         </div>

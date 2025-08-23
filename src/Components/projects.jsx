@@ -56,7 +56,7 @@ function Card(props) {
       </div>
       <div className='btn-box px-4 mb-4'>
         {props.techStck.map((tech, index) => (
-          <p key={index} className='mr-2 p-2 inline-block text-sm py-0 rounded-full bg-gray-500 bg-opacity-25'>
+          <p key={index} className='mr-2 p-2 inline-block text-sm py-0 rounded-full bg-gray-500/25'>
             {tech}
           </p>
         ))}
