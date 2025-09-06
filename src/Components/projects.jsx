@@ -1,7 +1,9 @@
-import project1 from '../images/project-1.jpeg';
-import project2 from '../images/project-2.jpeg';
-import alpha from '../images/under-construction.jpg'
+import { LuExternalLink } from "react-icons/lu";
+import { SiTailwindcss, SiHtml5, SiJavascript, SiDjango, SiCss3, SiPython, SiReact, SiElectron, SiFirebase } from "react-icons/si";
 
+import project1 from "../images/project-1.jpeg";
+import project2 from "../images/project-2.jpeg";
+import alpha from "../images/under-construction.jpg";
 
 const description1 = "Designed a sleek shop website using Tailwind CSS with an attractive UI.";
 const description2 = "Full-stack blog web application with user registration and login functionality.";
@@ -17,7 +19,7 @@ const cardData = {
   },
   card2: {
     imageUrl: project2,
-    linkUrl: "https://awanish996.pythonanywhere.com/",
+    linkUrl: "https://myblog-gold.vercel.app/",
     Name: "MultiUser Blog App",
     discription: description2,
     techStck: ["Django", "HTML", "CSS", "Javascript", "Python"]
@@ -27,50 +29,76 @@ const cardData = {
     linkUrl: "",
     Name: "Under Construction",
     discription: description3,
-    techStck: ["React", "Electron", "Firebase", "BLAH BLAH"]
-  },
-}
+    techStck: ["React", "Electron", "Firebase"]
+  }
+};
 
-function Card(props) {
+// Map known tech names to Simple Icons
+const techIconMap = {
+  "Tailwind CSS": SiTailwindcss,
+  HTML: SiHtml5,
+  Javascript: SiJavascript,
+  Django: SiDjango,
+  CSS: SiCss3,
+  Python: SiPython,
+  React: SiReact,
+  Electron: SiElectron,
+  Firebase: SiFirebase
+};
+
+function TechPill({ label }) {
+  const Icon = techIconMap[label];
   return (
-    <div className="project relative group">
-      {/* Top Border */}
-      <span className="absolute top-0 left-0 h-[1px] w-full bg-purple-500 transition-transform transform scale-x-0 group-hover:scale-x-100 duration-1000 origin-left"></span>
-      {/* Right Border */}
-      <span className="absolute top-0 right-0 w-[1px] h-full bg-purple-500 transition-transform transform scale-y-0 group-hover:scale-y-100 duration-1000 origin-top"></span>
-      {/* Bottom Border */}
-      <span className="absolute bottom-0 left-0 h-[1px] w-full bg-purple-500 transition-transform transform scale-x-0 group-hover:scale-x-100 duration-1000 origin-right"></span>
-      {/* Left Border */}
-      <span className="absolute top-0 left-0 w-[1px] h-full bg-purple-500 transition-transform transform scale-y-0 group-hover:scale-y-100 duration-1000 origin-bottom"></span>
-      <div className='img-box'>
-        <img src={props.imageUrl} alt="project" className="rounded-md" />
-      </div>
-      <div className='text-box'>
-        <a href={props.linkUrl} className="text-xl" >
-          {props.Name}
-        </a>
-        <hr className='my-2' />
-        <p className='font-sans font-normal text-base text-opacity-70'>
-          {props.discription}
-        </p>
-      </div>
-      <div className='btn-box px-4 mb-4'>
-        {props.techStck.map((tech, index) => (
-          <p key={index} className='mr-2 p-2 inline-block text-sm py-0 rounded-full bg-gray-500/25'>
-            {tech}
-          </p>
-        ))}
-      </div>
-    </div>
+    <span className="mr-2 mb-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-gray-200/90 transition-all hover:bg-violet-500/10 hover:border-violet-400/40">
+      {Icon ? <Icon className="size-4 opacity-90" aria-hidden /> : null}
+      <span>{label}</span>
+    </span>
   );
 }
 
+function Card(props) {
+  const clickable = Boolean(props.linkUrl);
+  return (
+    <article className="project relative group border bg-white/0 border-white/10 hover:border-violet-400/40 rounded-md overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
+      <div className="relative aspect-[16/12] overflow-hidden">
+        {clickable ? (
+          <a href={props.linkUrl} target="_blank" rel="noopener noreferrer" aria-label={`${props.Name} – open`}>
+            <img src={props.imageUrl} alt={props.Name} className="h-full w-full object-cover rounded-md transition-transform duration-300 group-hover:scale-[1.00]" />
+          </a>
+        ) : (
+          <img src={props.imageUrl} alt={props.Name} className="h-full w-full object-cover rounded-md" />
+        )}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+      </div>
+
+      <div className="text-box">
+        {clickable ? (
+          <a href={props.linkUrl} target="_blank" rel="noopener noreferrer" className="text-xl inline-flex items-center gap-2">
+            {props.Name}
+            <LuExternalLink className="ml-2 size-4 opacity-70 group-hover:opacity-100" aria-hidden />
+          </a>
+        ) : (
+          <span className="text-xl">{props.Name}</span>
+        )}
+        <hr className="mb-2" />
+        <p className="font-sans font-normal text-base/6 opacity-80">{props.discription}</p>
+      </div>
+
+      <div className="btn-box px-4 mb-4 flex flex-wrap">
+        {props.techStck.map((tech, i) => (
+          <TechPill key={i} label={tech} />
+        ))}
+      </div>
+    </article>
+  );
+}
 
 export default function Project() {
   return (
-    <div id="projects" className="projects sm:rounded-3xl sm:my-8 sm:mr-12" >
+    <div id="projects" className="projects sm:rounded-3xl sm:my-8 sm:mr-12">
       <h1>Projects</h1>
-      <div className="box">
+      <div className="divider-gradient" />
+      <div className="box grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         <Card {...cardData.card1} />
         <Card {...cardData.card2} />
         <Card {...cardData.card3} />
