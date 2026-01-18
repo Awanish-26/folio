@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { lazy, useState, Suspense } from "react";
 import ProjectCard from "./ProjectCard";
-import MixedProjectsModal from "./MixedProjectsModal";
 import { cardData } from "./projectsData";
+
+const MixedProjectsModal = lazy(() => import("./MixedProjectsModal"));
 
 export default function Project() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,10 +19,14 @@ export default function Project() {
         </div>
       </div>
 
-      <MixedProjectsModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
+      {isModalOpen && (
+        <Suspense fallback={null}>
+          <MixedProjectsModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          />
+        </Suspense>
+      )}
     </>
   );
 }
