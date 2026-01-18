@@ -218,6 +218,33 @@ svg {
   }
 }
 
+.rain-drop{
+  position: absolute;
+  background-color: aquamarine;
+  width: 2px;
+  height: 8px;
+  border-radius: 50%;
+  animation-name: fall;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall{
+  0%{
+    transform: translate(5px,-10vh);
+    opacity: 1;
+  }
+  /* 50%{
+    transform: translate(50px,50vh);
+  } */
+  100%{
+    transform: translate(10px,100vh);
+    opacity: 0.5;
+  }
+}
+
 /* media querries for sreen sixe below 768 px */
 @media screen and (max-width: 768px) {
   .intro,

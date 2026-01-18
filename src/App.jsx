@@ -1,5 +1,5 @@
 import Awanish from "./Components/intro";
-import Project from "./Components/projects";
+import Project from "./Components/project/projects";
 import Lang from "./Components/lang";
 import Contact from "./Components/contact";
 

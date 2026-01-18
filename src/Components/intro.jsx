@@ -20,7 +20,7 @@ export default function Awanish() {
         with a focus on creating technology that <span className='text-white bg-black/20 px-1 rounded'>positively impacts people's lives</span>.
       </p>
       <a href={resume} download className="mt-auto inline-flex items-center gap-2 border-2 border-purple-600 bg-purple-600/20 hover:bg-purple-600/60 text-white/80 font-bold py-2 px-8 rounded-full">Download Resume  <LuDownload /> </a>
-      <img src={bgImage} alt="background" className="hidden lg:block lg:absolute bottom-0 right-2 rounded-xl h-auto md:h-96 w-auto pointer-events-none" />
+      <img src={bgImage} alt="background" className="hidden lg:block lg:absolute bottom-0 right-0 rounded-xl h-auto md:h-72 auto pointer-events-none" />
     </div>
   );
 }
