@@ -1,34 +1,34 @@
-import predacon from "../images/predaking.png";
-import * as Si from "react-icons/si";
-import * as Lu from "react-icons/lu";
+import predacon from "../images/predaking.avif";
+import { SiPython, SiJavascript, SiC, SiNodedotjs, SiReact, SiTailwindcss, SiDjango, SiCss3, SiGit, SiGithub, SiOpenai, SiGithubcopilot } from "../utils/icons";
+import { LuUsers, LuRepeat, LuPuzzle, LuBrain } from "../utils/icons";
 
 export default function Lang() {
   const languages = [
-    { name: "Python", Icon: Si.SiPython },
-    { name: "JavaScript", Icon: Si.SiJavascript },
-    { name: "C", Icon: Si.SiC },
-    { name: "Node.js", Icon: Si.SiNodedotjs },
+    { name: "Python", Icon: SiPython },
+    { name: "JavaScript", Icon: SiJavascript },
+    { name: "C", Icon: SiC },
+    { name: "Node.js", Icon: SiNodedotjs },
   ];
 
   const webdev = [
-    { name: "React", Icon: Si.SiReact },
-    { name: "Tailwind", Icon: Si.SiTailwindcss },
-    { name: "Django", Icon: Si.SiDjango },
-    { name: "CSS", Icon: Si.SiCss3 },
+    { name: "React", Icon: SiReact },
+    { name: "Tailwind", Icon: SiTailwindcss },
+    { name: "Django", Icon: SiDjango },
+    { name: "CSS", Icon: SiCss3 },
   ];
 
   const tools = [
-    { name: "Git", Icon: Si.SiGit },
-    { name: "GitHub", Icon: Si.SiGithub },
-    { name: "Copilot", Icon: Si.SiGithubcopilot },
-    { name: "ChatGPT", Icon: Si.SiOpenai },
+    { name: "Git", Icon: SiGit },
+    { name: "GitHub", Icon: SiGithub },
+    { name: "Copilot", Icon: SiGithubcopilot },
+    { name: "ChatGPT", Icon: SiOpenai },
   ];
 
   const softSkills = [
-    { name: "Team Work", Icon: Lu.LuUsers },
-    { name: "Adaptability", Icon: Lu.LuRepeat },
-    { name: "Problem Solving", Icon: Lu.LuPuzzle },
-    { name: "Critical Thinking", Icon: Lu.LuBrain },
+    { name: "Team Work", Icon: LuUsers },
+    { name: "Adaptability", Icon: LuRepeat },
+    { name: "Problem Solving", Icon: LuPuzzle },
+    { name: "Critical Thinking", Icon: LuBrain },
   ];
 
   const Pill = ({ item }) => (

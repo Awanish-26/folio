@@ -1,6 +1,6 @@
-import project1 from "../../images/project-1.jpeg";
-import project2 from "../../images/project-2.jpeg";
-import alpha from "../../images/under-construction.jpg";
+import project1 from "../../images/project-1.webp";
+import project2 from "../../images/project-2.png";
+import alpha from "../../images/under-construction.webp";
 
 export const cardData = {
     card1: {
@@ -42,10 +42,10 @@ export const smallProjects = [
         color: "from-green-500/20 to-emerald-500/20"
     },
     {
-        name: "Prisma Schema",
+        name: "Dynamic API",
         description: "Database schema and ORM configuration",
         techStack: ["Prisma", "Node"],
-        linkUrl: "https://github.com/yourusername/prisma-schema",
+        linkUrl: "https://github.com/Awanish-26/DynAPI",
         color: "from-purple-500/20 to-pink-500/20"
     },
     {
@@ -70,19 +70,3 @@ export const smallProjects = [
         color: "from-teal-500/20 to-cyan-500/20"
     }
 ];
-
-export const techIconMap = {
-    "Tailwind CSS": "SiTailwindcss",
-    HTML: "SiHtml5",
-    Javascript: "SiJavascript",
-    Django: "SiDjango",
-    CSS: "SiCss3",
-    Python: "SiPython",
-    React: "SiReact",
-    Electron: "SiElectron",
-    Firebase: "SiFirebase",
-    Node: "SiNodedotjs",
-    Rainmeter: "SiGithub",
-    Prisma: "SiGithub",
-    Lua: "SiGithub"
-};

@@ -1,6 +1,6 @@
 import resume from '../assets/Resume.pdf';
 import zigzag from "../images/linea.png";
-import bgImage from "../images/backgd.png"
+import bgImage from "../images/backgd.avif"
 import { LuDownload } from 'react-icons/lu';
 
 export default function Awanish() {

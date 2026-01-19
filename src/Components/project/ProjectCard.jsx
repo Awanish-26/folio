@@ -27,7 +27,7 @@ export default function ProjectCard({ imageUrl, linkUrl, Name, discription, tech
                         <img src={imageUrl} alt={Name} className="h-full w-full object-cover rounded-md transition-transform duration-300 group-hover:scale-105" />
                         {isMixedCard && (
                             <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300">
-                                <span className="px-4 py-2 bg-violet-500/90 text-white rounded-lg font-medium">
+                                <span className="px-4 py-2 bg-violet-500/10 border-2 border-violet-500 text-white rounded-lg font-medium">
                                     View Projects
                                 </span>
                             </div>

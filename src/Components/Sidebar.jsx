@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import me from '../images/me.png';
-import me2 from '../images/me.jpeg';
+import me from '../images/me.avif';
+import me2 from '../images/meo.avif';
 import { FaRegUserCircle } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
 import { FaToolbox } from "react-icons/fa6";
