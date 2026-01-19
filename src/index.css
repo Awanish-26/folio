@@ -1,9 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Fragment+Mono:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@0&display=swap");
 @import "tailwindcss";
 
-:root {
-  color-scheme: light dark;
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html,
+  body {
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  .card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.35)];
+  }
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/50;
+  }
+  .soft-divider {
+    @apply border-t border-white/10;
+  }
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.22);
 }
 
 html,
@@ -34,19 +66,20 @@ body {
 }
 
 h1 {
-  font-family: "Inter", sans-serif;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 36px;
   text-align: center;
-  border-bottom: 2px solid light-dark(#3f3f3f, #c5c5c5);
 }
 
 p {
-  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+  font-family: "Space Mono", monospace;
   font-weight: 400;
+  font-style: normal;
   line-height: 1.43;
-  letter-spacing: 0.01071em;
+  letter-spacing: 0.0015em;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -55,7 +88,7 @@ p {
 .discription > div {
   padding: 20px;
   background-color: light-dark(#aaaaaa, #212121);
-  box-shadow: 20px 20px 60px #0d0d0d, -20px -20px 60px #353535;
+  box-shadow: 20px 20px 60px #0d0d0d, -20px -20px 60px #0e0b0b;
 }
 
 .sidebar {
@@ -86,8 +119,17 @@ svg {
 
 /* intro section */
 
-.intro {
+.intro,
+.projects,
+.contact,
+.langauages {
   height: 90vh;
+}
+
+.intro > a {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* project section css */
@@ -97,10 +139,8 @@ svg {
 }
 
 .project {
-  height: 480px;
-  max-height: 600px;
+  /* max-height: 600px; */
   border-radius: 5px;
-  background-color: #121212;
   background-image: linear-gradient(
     rgba(255, 255, 255, 0.051),
     rgba(255, 255, 255, 0.051)
@@ -118,11 +158,11 @@ svg {
 .text-box > a {
   display: block;
   color: light-dark(#5e37d3, #a78bfa);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .text-box > a:hover {
-  border-color: #5e37d3;
+  color: light-dark(#5e37d3, #623cd6);
 }
 
 /* language section css */
@@ -132,6 +172,7 @@ svg {
 }
 
 .lang_grid > div > h2 {
+  font-family: "Space Mono", sans-serif;
   color: rgb(175, 114, 224);
   font-size: 1.5rem;
   border-bottom: 1px solid #18c4c4;
@@ -146,20 +187,19 @@ svg {
   margin: 2px;
 }
 
-.lang_grid > div > p::before {
-  content: "";
-  position: absolute;
-  display: inline-flex;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  border-left: 50px solid #0ff040;
-  border-right: 50px solid #00d9ff;
+.contact-form {
+  font-family: "Space Mono", sans-serif;
+  letter-spacing: 0.1em;
 }
 
-.lang_grid > div > p:hover::before {
-  animation: exapnd 4s infinite alternate ease-in-out;
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.61),
+    transparent
+  );
 }
 
 @keyframes exapnd {
@@ -178,9 +218,39 @@ svg {
   }
 }
 
+.rain-drop{
+  position: absolute;
+  background-color: aquamarine;
+  width: 2px;
+  height: 8px;
+  border-radius: 50%;
+  animation-name: fall;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall{
+  0%{
+    transform: translate(5px,-10vh);
+    opacity: 1;
+  }
+  /* 50%{
+    transform: translate(50px,50vh);
+  } */
+  100%{
+    transform: translate(10px,100vh);
+    opacity: 0.5;
+  }
+}
+
 /* media querries for sreen sixe below 768 px */
 @media screen and (max-width: 768px) {
-  .intro {
+  .intro,
+  .projects,
+  .contact,
+  .langauages {
     height: auto;
   }
 
@@ -195,12 +265,6 @@ svg {
 
   .project {
     height: auto;
-  }
-
-  .img-box {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
   }
 }
 
