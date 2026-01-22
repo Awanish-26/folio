@@ -15,7 +15,7 @@ export const cardData = {
         linkUrl: "https://myblog-gold.vercel.app/",
         Name: "MultiUser Blog App",
         discription: "Full-stack blog web application with user registration and login functionality.",
-        techStck: ["Django", "HTML", "CSS", "Javascript", "Python"]
+        techStck: ["Django", "Javascript", "Python"]
     },
     card3: {
         imageUrl: alpha,
