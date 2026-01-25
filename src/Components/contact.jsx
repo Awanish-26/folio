@@ -3,7 +3,7 @@ import ContactForm from './form';
 
 export default function Contact() {
   return (
-    <div id="contact" className="contact relative sm:rounded-3xl sm:my-8 sm:mr-12">
+    <div id="contact" className="contact overflow-auto relative sm:rounded-3xl sm:my-8 sm:mr-12">
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute rounded-3xl inset-0 bg-[radial-gradient(60%_40%_at_100%_0%,rgba(124,58,237,0.20),transparent_80%)]" />
         <div className="absolute rounded-3xl inset-0 bg-[radial-gradient(50%_35%_at_0%_100%,rgba(56,189,248,0.10),transparent_80%)]" />

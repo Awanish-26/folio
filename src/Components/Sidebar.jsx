@@ -32,7 +32,7 @@ export default function Sidebar() {
       </div>
 
       {/* Navigation Links */}
-      <div className="links sm:h-full w-full mx-2 sm:m-0">
+      <div className="links flex items-center justify-evenly sm:h-full w-full mx-2 sm:m-0 overflow-auto">
         <ul className="flex justify-around sm:block w-full">
           <li>
             <a href="#intro">{renderLinkContent("Awanish", FaRegUserCircle)}</a>
