@@ -15,7 +15,7 @@ export const cardData = {
         linkUrl: "https://myblog-gold.vercel.app/",
         Name: "MultiUser Blog App",
         discription: "Full-stack blog web application with user registration and login functionality.",
-        techStck: ["Django", "HTML", "CSS", "Javascript", "Python"]
+        techStck: ["Django", "Javascript", "Python"]
     },
     card3: {
         imageUrl: alpha,
@@ -35,10 +35,10 @@ export const smallProjects = [
         color: "from-blue-500/20 to-cyan-500/20"
     },
     {
-        name: "CLI Tool",
-        description: "Command-line utility for automation tasks",
-        techStack: ["Node", "Javascript"],
-        linkUrl: "https://github.com/yourusername/cli-tool",
+        name: "Haffmann File Encoder CLI",
+        description: "Command-line tool for file encoding using Haffmann algorithm",
+        techStack: ["Python", "CLI"],
+        linkUrl: "https://gist.github.com/Awanish-26/4e9399b7163fbffa98c3fccaf186c6f2",
         color: "from-green-500/20 to-emerald-500/20"
     },
     {
