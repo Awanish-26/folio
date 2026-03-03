@@ -2,7 +2,7 @@ import { LuExternalLink } from "react-icons/lu";
 
 export default function SmallProjectCard({ project }) {
     return (
-        <a href={project.linkUrl} target="_blank" rel="noopener noreferrer" className={`group relative p-5 rounded-xl border border-white/10 bg-gradient-to-br ${project.color} hover:border-violet-400/40 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.35)] overflow-hidden`}>
+        <a href={project.linkUrl} target="_blank" rel="noopener noreferrer" className={`sk group relative p-5 rounded-xl border border-white/10 bg-gradient-to-br ${project.color} hover:border-violet-400/40 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.35)] overflow-hidden`}>
             <div className="relative z-10">
                 <div className="flex items-start justify-between mb-3">
                     <h3 className="text-lg font-semibold text-white group-hover:text-violet-300 transition-colors">
@@ -15,7 +15,7 @@ export default function SmallProjectCard({ project }) {
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                     {project.techStack.map((tech, i) => (
-                        <span key={i} className="px-2 py-0.5 text-xs rounded-md bg-white/10 text-gray-200/90 border border-white/10">
+                        <span key={i} className="sk px-2 py-0.5 text-xs rounded-md bg-white/10 text-gray-200/90 border border-white/10">
                             {tech}
                         </span>
                     ))}

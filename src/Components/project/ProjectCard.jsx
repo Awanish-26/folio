@@ -13,10 +13,7 @@ export default function ProjectCard({ imageUrl, linkUrl, Name, discription, tech
     };
 
     return (
-        <article
-            className={`project relative group border bg-white/0 border-white/10 hover:border-violet-400/40 rounded-md overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.35)] ${isMixedCard ? 'cursor-pointer' : ''}`}
-            onClick={handleClick}
-        >
+        <article className={`sk project relative group border bg-white/0 border-white/10 hover:border-violet-400/40 rounded-md overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.35)] ${isMixedCard ? 'cursor-pointer' : ''}`}    onClick={handleClick}>
             <div className="relative aspect-[16/12] overflow-hidden">
                 {clickable ? (
                     <a href={linkUrl} target="_blank" rel="noopener noreferrer" aria-label={`${Name} – open`}>

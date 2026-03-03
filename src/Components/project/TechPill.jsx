@@ -20,7 +20,7 @@ export default function TechPill({ label }) {
     const Icon = techIconMap[label];
 
     return (
-        <span className="mr-1.5 mb-1.5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs scale-90 text-gray-200/90 transition-all hover:bg-violet-500/10 hover:border-violet-400/40">
+        <span className="sk mr-1.5 mb-1.5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs scale-90 text-gray-200/90 transition-all hover:bg-violet-500/10 hover:border-violet-400/40">
             {Icon ? <Icon className="size-3 opacity-90" aria-hidden /> : null}
             <span>{label}</span>
         </span>
