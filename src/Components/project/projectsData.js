@@ -6,6 +6,7 @@ export const cardData = {
     card1: {
         imageUrl: project1,
         linkUrl: "https://awanish-26.github.io/Tailwind/",
+        githubUrl: "https://github.com/Awanish-26/Tailwind",
         Name: "Sweet Shop Project",
         discription: "Designed a sleek shop website using Tailwind CSS with an attractive UI.",
         techStck: ["Tailwind CSS", "HTML", "Javascript", "UI/UX"]
@@ -13,6 +14,7 @@ export const cardData = {
     card2: {
         imageUrl: project2,
         linkUrl: "https://myblog-gold.vercel.app/",
+        githubUrl: "https://github.com/Awanish-26/BlogXAwa",
         Name: "MultiUser Blog App",
         discription: "Full-stack blog web application with user registration and login functionality.",
         techStck: ["Django", "Javascript", "Python"]

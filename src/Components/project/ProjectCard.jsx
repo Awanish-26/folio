@@ -1,7 +1,8 @@
 import { LuExternalLink } from "react-icons/lu";
+import { SiGithub } from "../../utils/icons";
 import TechPill from "./TechPill";
 
-export default function ProjectCard({ imageUrl, linkUrl, Name, discription, techStck, onMixedClick }) {
+export default function ProjectCard({ imageUrl, linkUrl, githubUrl, Name, discription, techStck, onMixedClick }) {
     const clickable = Boolean(linkUrl);
     const isMixedCard = !linkUrl && Name.includes("Mixed");
 
@@ -35,14 +36,19 @@ export default function ProjectCard({ imageUrl, linkUrl, Name, discription, tech
             </div>
 
             <div className="text-box">
-                {clickable ? (
-                    <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="text-xl inline-flex items-center gap-2">
-                        {Name}
-                        <LuExternalLink className="ml-2 size-4 opacity-70 group-hover:opacity-100" aria-hidden />
-                    </a>
-                ) : (
-                    <span className="text-xl">{Name}</span>
-                )}
+                <div className="flex items-center gap-3">
+                    <span className="text-lg">{Name}</span>
+                    {clickable && (
+                        <a href={linkUrl} target="_blank" rel="noopener noreferrer" aria-label={`${Name} – live site`} title="Open live site" className="text-white/70 hover:text-white">
+                            <LuExternalLink className="size-4" aria-hidden />
+                        </a>
+                    )}
+                    {githubUrl && (
+                        <a href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`${Name} – GitHub repository`} title="Open GitHub repository" className="text-white/70 hover:text-white">
+                            <SiGithub className="size-4" aria-hidden />
+                        </a>
+                    )}
+                </div>
                 <hr className="mb-2" />
                 <p className="font-sans font-normal text-base/6 opacity-80">{discription}</p>
             </div>
