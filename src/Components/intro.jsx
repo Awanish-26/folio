@@ -1,63 +1,9 @@
 import zigzag from "../images/linea.png";
 import bgImage from "../images/backgd.avif"
-import { LuDownload, LuMapPin, LuWind, LuSunMedium, LuCloudSun, LuCloudRain, LuCloudDrizzle, LuCloudSnow, LuCloudLightning } from 'react-icons/lu';
+import { LuDownload, LuMapPin, LuWind } from 'react-icons/lu';
 import { useState,useEffect } from "react";
+import { weatherCodeMap , weatherSceneImages , getWeatherScene , WEATHER_URL } from "./data/weather";
 
-const WEATHER_URL =
-  "https://api.open-meteo.com/v1/forecast" +
-  "?latitude=26.8467" +
-  "&longitude=80.9462" +
-  "&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m" +
-  "&timezone=Asia%2FKolkata";
-
-const weatherSceneImages = {
-  clear: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=80",
-  cloudy: "https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=900&q=80",
-  rain: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=900&q=80",
-  snow: "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&w=900&q=80",
-  storm: "https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?auto=format&fit=crop&w=900&q=80",
-};
-
-const getWeatherScene = (weatherCode) => {
-  if (weatherCode === 0) return weatherSceneImages.clear;
-  if (weatherCode <= 3 || weatherCode === 45 || weatherCode === 48) return weatherSceneImages.cloudy;
-  if (weatherCode <= 67 || (weatherCode >= 80 && weatherCode <= 82)) return weatherSceneImages.rain;
-  if (weatherCode >= 71 && weatherCode <= 77 || weatherCode === 85 || weatherCode === 86) return weatherSceneImages.snow;
-  return weatherSceneImages.storm;
-};
-
-const weatherCodeMap = {
-  0: { label: "Clear", icon: LuSunMedium },
-  1: { label: "Mostly clear", icon: LuCloudSun },
-  2: { label: "Partly cloudy", icon: LuCloudSun },
-  3: { label: "Cloudy", icon: LuCloudSun },
-  45: { label: "Foggy", icon: LuCloudSun },
-  48: { label: "Foggy", icon: LuCloudSun },
-  51: { label: "Light drizzle", icon: LuCloudDrizzle },
-  53: { label: "Drizzle", icon: LuCloudDrizzle },
-  55: { label: "Heavy drizzle", icon: LuCloudDrizzle },
-  56: { label: "Freezing drizzle", icon: LuCloudDrizzle },
-  57: { label: "Freezing drizzle", icon: LuCloudDrizzle },
-  61: { label: "Rain", icon: LuCloudRain },
-  63: { label: "Rain", icon: LuCloudRain },
-  65: { label: "Heavy rain", icon: LuCloudRain },
-  66: { label: "Freezing rain", icon: LuCloudRain },
-  67: { label: "Freezing rain", icon: LuCloudRain },
-  71: { label: "Snow", icon: LuCloudSnow },
-  73: { label: "Snow", icon: LuCloudSnow },
-  75: { label: "Heavy snow", icon: LuCloudSnow },
-  77: { label: "Hail", icon: LuCloudSnow },
-  80: { label: "Showers", icon: LuCloudRain },
-  81: { label: "Showers", icon: LuCloudRain },
-  82: { label: "Heavy showers", icon: LuCloudRain },
-  85: { label: "Snow showers", icon: LuCloudSnow },
-  86: { label: "Heavy snow showers", icon: LuCloudSnow },
-  95: { label: "Thunderstorm", icon: LuCloudLightning },
-  96: { label: "Thunderstorm", icon: LuCloudLightning },
-  99: { label: "Thunderstorm", icon: LuCloudLightning },
-};
-
-  
 export default function Awanish() {
 
   // All the time is local developer time and weather
@@ -149,10 +95,11 @@ export default function Awanish() {
       <img src={zigzag} alt="zigzag" className="fixed -rotate-2 h-full left-24 top-0 bottom-0 -z-10 aspect-square" />
 
       {/* main layout */}
-      <div className="unit flex min-h-full flex-col">
+      <div className="flex min-h-full flex-col">
         <h1 className="mt-4 text-white">About Me</h1>
         <div className="sk divider-gradient" />
 
+        {/* upper intro */}
         <div className="unit_one">
           <p className="text-sm sm:text-lg my-8">
             I'm a passionate <span className='text-white bg-black/20 px-1 rounded'> student developer </span> with a strong foundation in both <span className='text-white'>front-end</span> and <span className='text-white bg-black/20 px-1 rounded'>back-end</span> development.
@@ -164,23 +111,15 @@ export default function Awanish() {
         </div>
 
 
+        {/* Lower Image card */}
         <div className="unit_two my-4 flex w-full h-full justify-between">
             <div className="relative h-72 w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50 shadow-[0_0_24px_rgba(34,211,238,0.12)] sm:h-80">
 
               <img src={bgImage} alt="background" className="absolute left-0 h-full w-1/2 object-cover" />
 
-              <img
-                src={weatherSceneImage}
-                alt="Weather scene"
-                onError={(event) => {
-                  event.currentTarget.onerror = null;
-                  event.currentTarget.src = weatherSceneImages.cloudy;
-                }}
-                className="absolute right-0 h-full w-1/2 object-cover"
-              />
+              <img src={weatherSceneImage} alt="Weather scene" onError={(event) => {event.currentTarget.onerror = null;event.currentTarget.src = weatherSceneImages.cloudy; }}  className="absolute right-0 h-full w-1/2 object-cover"/>
               
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-950 to-transparent" />
-
 
               <div className="absolute bottom-3 right-3 text-center rounded-xl border border-white/10 bg-black/25 px-2 py-1.5 backdrop-blur-sm">
                 <p>
