@@ -44,15 +44,21 @@ body {
   background-color: light-dark(#e2e2e2, #212121);
   overflow: visible;
   width: 100%;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.07) 2px,
-      transparent 2px
-    ),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 2px, transparent 2px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.07) 2px, transparent 2px),
     linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  background-size:
+    100px 100px,
+    100px 100px,
+    20px 20px,
+    20px 20px;
+  background-position:
+    -2px -2px,
+    -2px -2px,
+    -1px -1px,
+    -1px -1px;
 }
 
 ::-webkit-scrollbar {
@@ -88,12 +94,16 @@ p {
 .discription > div {
   padding: 20px;
   background-color: light-dark(#aaaaaa, #212121);
-  box-shadow: 20px 20px 60px #0d0d0d, -20px -20px 60px #0e0b0b;
+  box-shadow:
+    20px 20px 60px #0d0d0d,
+    -20px -20px 60px #0e0b0b;
 }
 
 .sidebar {
   background-color: light-dark(#aaaaaa, #212121);
-  box-shadow: 20px 20px 60px #0d0d0d, -20px -20px 60px #353535;
+  box-shadow:
+    20px 20px 60px #0d0d0d,
+    -20px -20px 60px #353535;
 }
 
 .links > ul > li > a {
@@ -145,8 +155,10 @@ svg {
     rgba(255, 255, 255, 0.051),
     rgba(255, 255, 255, 0.051)
   );
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   margin: 0.8rem;
 }
 
@@ -193,7 +205,7 @@ svg {
 }
 
 .divider-gradient {
-  height: 1px;
+  height: 2px;
   background: linear-gradient(
     to right,
     transparent,
@@ -218,7 +230,7 @@ svg {
   }
 }
 
-.rain-drop{
+.rain-drop {
   position: absolute;
   background-color: aquamarine;
   width: 2px;
@@ -231,16 +243,16 @@ svg {
   animation-fill-mode: forwards;
 }
 
-@keyframes fall{
-  0%{
-    transform: translate(5px,-10vh);
+@keyframes fall {
+  0% {
+    transform: translate(5px, -10vh);
     opacity: 1;
   }
   /* 50%{
     transform: translate(50px,50vh);
   } */
-  100%{
-    transform: translate(10px,100vh);
+  100% {
+    transform: translate(10px, 100vh);
     opacity: 0.5;
   }
 }
@@ -293,4 +305,46 @@ svg {
   .contact {
     margin-bottom: 8rem !important;
   }
+}
+
+/* ============================================================
+   MONO / SKELETON THEME
+   Applied when <html class="mono">
+
+   UTILITY CLASS: add  sk  to any JSX element.
+   ▸ Normal mode → no visual effect at all.
+   ▸ Mono mode   → white bg · 1px solid black border · black text
+                   no shadows · no gradients.
+   ============================================================ */
+
+html.mono,
+html.mono body {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+/* ── Core utility ─────────────────────────────────────────── */
+html.mono .sk {
+  background: #ffffff !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  border: 1px solid #000000 !important;
+  outline-color: #000000 !important;
+  color: #000000 !important;
+}
+
+/* Every descendant inside .sk → transparent bg + black text */
+html.mono .sk * {
+  color: #000000 !important;
+  text-shadow: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+html.mono img {
+  filter: grayscale(1) contrast(0.9) !important;
 }

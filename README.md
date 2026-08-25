@@ -1,72 +1,32 @@
-# Getting Started with Create React App
+# Folio - My Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my corner of the internet! This is the source code for my personal portfolio, a place where I showcase my projects, skills, and a little bit about who I am. I built this to be a clean, modern, and fast-loading representation of my work.
 
-## Available Scripts
+## About This Project
 
-In the project directory, you can run:
+This portfolio is a single-page application built with React and Vite. I wanted to create a space that's not just a list of projects, but an experience. That's why I've used lazy loading for the components to ensure the initial load is as fast as possible. I've also sprinkled in some animations with GSAP to make the user experience more engaging.
 
-### `npm start`
+The main sections of the portfolio are:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Intro:** A brief introduction to who I am.
+- **Projects:** A showcase of my work, including both large and small projects.
+- **Languages & Tools:** A look at the technologies I'm comfortable with.
+- **Contact:** A way to get in touch with me.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+I've used a combination of modern web technologies to build this portfolio:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **[React](https://react.dev/):** For building the user interface.
+- **[Vite](https://vitejs.dev/):** As the build tool and development server.
+- **[Tailwind CSS](https://tailwindcss.com/):** For styling the application.
+- **[React Icons](https://react-icons.github.io/react-icons/):** For the icons used throughout the site.
+- **[Vercel Analytics](https://vercel.com/analytics):** To gather insights on website traffic.
+- **[Vercel Speed Insights](https://vercel.com/speed-insights):** To monitor the performance of the site.
+  ]
 
-### `npm run build`
+## A Little More About Me
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I'm passionate about creating beautiful and functional web experiences. I'm always learning and exploring new technologies to improve my skills. This portfolio is a reflection of that journey.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-## None
+Feel free to explore my projects and get in touch if you'd like to collaborate or just say hi!

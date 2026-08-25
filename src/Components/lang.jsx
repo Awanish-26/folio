@@ -33,7 +33,7 @@ export default function Lang() {
 
   const Pill = ({ item }) => (
     <li className="group">
-      <span className="flex items-center gap-2 px-3 py-2 rounded-lg border border-white/10 bg-white/5 transition-all duration-200 hover:bg-violet-500/10 hover:border-violet-400/40 hover:scale-[1.03]">
+      <span className="sk flex items-center gap-2 px-3 py-2 rounded-lg border border-white/10 bg-white/5 transition-all duration-200 hover:bg-violet-500/10 hover:border-violet-400/40 hover:scale-[1.03]">
         <item.Icon className="size-5 text-gray-300 opacity-80 transition-all duration-200 group-hover:opacity-100" />
         <span className="text-sm">{item.name}</span>
       </span>
@@ -41,7 +41,7 @@ export default function Lang() {
   );
 
   return (
-    <div id="langauage" className="langauages relative sm:rounded-3xl sm:my-8 sm:mr-12">
+    <div id="langauage" className="sk langauages relative sm:rounded-3xl sm:my-8 sm:mr-12">
       {/* gradient at top and bottom */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute rounded-3xl inset-0 bg-[radial-gradient(60%_40%_at_100%_0%,rgba(124,58,237,0.20),transparent_80%)]" />
@@ -49,7 +49,7 @@ export default function Lang() {
       </div>
 
       <h1 >Lang & Dev tools</h1>
-      <div className="divider-gradient mb-4" />
+      <div className="sk divider-gradient mb-4" />
       <div className="lang_grid sm:grid grid-rows-2 grid-cols-3 gap-2">
         <div>
           <h2>Languages</h2>

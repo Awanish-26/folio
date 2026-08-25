@@ -9,10 +9,10 @@ export default function Project() {
 
   return (
     <>
-      <div id="projects" className="projects sm:rounded-3xl sm:my-8 sm:mr-12 overflow-auto">
-        <h1>Projects</h1>
-        <div className="divider-gradient" />
-        <div className="box grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      <div id="projects" className="sk projects overflow-auto sm:my-8 sm:mr-12 sm:rounded-3xl">
+        <h1 className="px-3 sm:px-0">Projects</h1>
+        <div className="sk divider-gradient" />
+        <div className="box grid grid-cols-1 gap-3 px-2 sm:grid-cols-2 sm:gap-4 sm:px-0 lg:grid-cols-3">
           <ProjectCard {...cardData.card1} />
           <ProjectCard {...cardData.card2} />
           <ProjectCard {...cardData.card3} onMixedClick={() => setIsModalOpen(true)} />

@@ -11,7 +11,7 @@ export default function Drop() {
         <div className="fixed -top-5 bottom-0 left-0 right-0 bg-transparent overflow-hidden pointer-events-none">
             {drops.map((drop) => (
                 <div key={drop.id}
-                    className="rain-drop"
+                    className="sk rain-drop"
                     style={{
                         left: drop.left,
                         animationDelay: drop.delay,
