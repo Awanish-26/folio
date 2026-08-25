@@ -167,7 +167,7 @@ export default function Awanish() {
         <div className="unit_two my-4 flex w-full h-full justify-between">
             <div className="relative h-72 w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50 shadow-[0_0_24px_rgba(34,211,238,0.12)] sm:h-80">
 
-              <img src={bgImage} alt="background" className="absolute left-0 h-full w-2/3 object-cover" />
+              <img src={bgImage} alt="background" className="absolute left-0 h-full w-1/2 object-cover" />
 
               <img
                 src={weatherSceneImage}
@@ -176,13 +176,13 @@ export default function Awanish() {
                   event.currentTarget.onerror = null;
                   event.currentTarget.src = weatherSceneImages.cloudy;
                 }}
-                className="absolute right-0 h-full w-full object-cover opacity-95 mix-blend-screen"
+                className="absolute right-0 h-full w-1/2 object-cover"
               />
               
-              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/30 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-950 to-transparent" />
 
-              <div className="absolute right-3 top-3 text-center rounded-xl border border-white/10 bg-black/25 px-2 py-1.5 backdrop-blur-sm">
+
+              <div className="absolute bottom-3 right-3 text-center rounded-xl border border-white/10 bg-black/25 px-2 py-1.5 backdrop-blur-sm">
                 <p>
                   <span className="text-purple-600 drop-shadow-[0_0_15px_rgba(34,211,238,0.45)]">{time.hour}</span>
                   <span className="mx-1 animate-pulse text-white/40">:</span>
@@ -201,7 +201,7 @@ export default function Awanish() {
                 </div>
               </div>
 
-              <div className="absolute bottom-3 right-3 w-1/2 rounded-2xl border border-white/10 bg-black/35 p-3 backdrop-blur-md">
+              <div className="absolute top-3 right-3 rounded-2xl border border-white/10 bg-black/35 p-3 backdrop-blur-md">
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex items-center gap-2">
                     <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-300">
