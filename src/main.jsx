@@ -6,15 +6,11 @@ import Sidebar from './Components/Sidebar';
 import Drop from "./Components/drop"
 import ThemeToggle from './Components/ThemeToggle';
 import { ThemeProvider } from './context/ThemeContext';
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider>
-      <Analytics />
-      <SpeedInsights />
       <Drop />
       <Sidebar />
       <App />
